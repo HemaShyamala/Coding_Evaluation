@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #container {
+            background-color: white;
+            width: 80%;
+            height: auto;
+            margin: auto;
+            text-align: center;
+            padding-top: 10px;
+        }
+        
+        #imgBox {
+            display: grid;
+            grid-template: "m n o";
+            grid-gap: auto;
+            margin: auto;
+        }
+        
+        #imgBox>,
+        img:nth-child(1) {
+            grid-template-areas: "m";
+        }
+        
+        #imgBox>,
+        img:nth-child(2) {
+            grid-template-areas: "n";
+        }
+        
+        #imgBox>,
+        img:nth-child(3) {
+            grid-template-areas: "o";
+        }
+        
+        .img {
+            /* width: 28%; */
+            margin: 2%;
+            text-align: left;
+            float: left;
+        }
+        
+        p,
+        h3 {
+            text-align: left;
+            margin-left: 10%;
+        }
+        
+        p+h3 {
+            margin-top: -10px;
+        }
+        
+        button {
+            background-color: red;
+            width: 14%;
+            height: min-content;
+            color: white;
+            border: 2px solid white;
+            font-weight: bold;
+            margin-bottom: 60px;
+            padding: 1%;
+            cursor: pointer;
+        }
+        
+        #service_box {
+            display: grid;
+            grid-template: "a b c" "d e f";
+        }
+        
+        #box1,
+        #box2,
+        #box3,
+        #box4,
+        #box5,
+        #box6 {
+            height: auto;
+            margin: 2%;
+            text-align: left;
+        }
+        
+        #box1 {
+            grid-template-areas: "a";
+        }
+        
+        #box2 {
+            grid-template-areas: "b";
+        }
+        
+        #box3 {
+            grid-template-areas: "c";
+        }
+        
+        #box4 {
+            grid-template-areas: "d";
+        }
+        
+        #box5 {
+            grid-template-areas: "e";
+        }
+        
+        #box6 {
+            grid-template-areas: "f";
+        }
+        
+        .floater {
+            float: left;
+        }
+        
+        #service_box img {
+            margin-left: 20px;
+            margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 100px;
+        }
+        
+        #service_box p {
+            padding-left: 20px;
+        }
+        
+        #service_box span {
+            margin-top: -30px;
+        }
+        
+        h1+p {
+            width: 50%;
+            text-align: center;
+            color: gray;
+            margin: auto;
+            margin-bottom: 35px;
+        }
+        
+        .floater {
+            float: left;
+        }
+        
+        h4 {
+            color: red;
+            font-size: x-small;
+            font-family: sans-serif;
+        }
+        
+        h1 {
+            font-size: x-large;
+        }
+        
+        h5 {
+            margin-top: 8px;
+            font-size: medium;
+            font-weight: normal;
+        }
+        
+        h5+p {
+            margin-top: -20px;
+            color: gray;
+            margin-left: auto;
+        }
+        
+        .img>img {
+            width: max-content;
+        }
+        
+        .img>img:nth-child(1) {
+            margin-left: 20px;
+        }
+        
+        .img>p {
+            color: gray;
+            font-size: small;
+        }
+        
+        .img>h3 {
+            font-weight: bold;
+            font-size: medium;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        @media only screen and (max-width: 600px) {
+            #service_box {
+                display: grid;
+                grid-template: "a" "b" "c" "d" "e" " f";
+            }
+            #imgBox {
+                display: grid;
+                grid-template: "m" " n" "o";
+                margin: auto;
+            }
+        }
+        
+        @media (min-width: 600px) {
+            #service_box {
+                display: grid;
+                grid-template: "a b" "c d" "e f";
+            }
+            #imgBox {
+                display: grid;
+                grid-template: "m n" " o o";
+                margin: auto;
+                grid-gap: auto;
+            }
+        }
+        
+        @media (min-width: 900px) {
+            #service_box {
+                display: grid;
+                grid-template: "a b c" "d e f";
+            }
+            #imgBox {
+                display: grid;
+                grid-template: "m n o";
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h4>NEWS AND UPDATE</h4>
+        <h1>Our Blog Posts</h1>
+        <div id="imgBox">
+            <div class="img">
+                <img src=" https://via.placeholder.com/270x190" />
+                <p>29, January 2019</p>
+                <h3>Architectural Art Modern</h3>
+            </div>
+            <div class="img">
+                <img src=" https://via.placeholder.com/270x190" />
+                <p>29, January 2019</p>
+                <h3>Architectural Art Modern</h3>
+            </div>
+            <div class="img">
+                <img src=" https://via.placeholder.com/270x190" />
+                <p>29, January 2019</p>
+                <h3>Architectural Art Modern</h3>
+            </div>
+        </div>
+        <button>View All Posts</button>
+        <h4>SERVICES</h4>
+        <h1>Our Services</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a accumsan neque. Pellentesque pharetra odio.
+        </p>
+        <div id="service_box">
+            <div id="box1">
+                <div class="floater">
+                    <img src="https://via.placeholder.com/50x50" />
+                </div>
+                <div class="floater"></div>
+                <h5>Innovative Structure</h5>
+                <p>
+                    Consectetur adipiscing elit. Nam dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+            <div id="box2">
+                <div class="floater">
+                    <img src="https://via.placeholder.com/50x50" />
+                </div>
+                <div class="floater"></div>
+                <h5>Innovative Structure</h5>
+                <p>
+                    Consectetur adipiscing elit. Nam dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+            <div id="box3">
+                <div class="floater">
+                    <img src="https://via.placeholder.com/50x50" />
+                </div>
+                <div class="floater"></div>
+                <h5>Innovative Structure</h5>
+                <p>
+                    Consectetur adipiscing elit. Nam dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+            <div id="box4">
+                <div class="floater">
+                    <img src="https://via.placeholder.com/50x50" />
+                </div>
+                <div class="floater"></div>
+                <h5>Innovative Structure</h5>
+                <p>
+                    Consectetur adipiscing elit. Nam dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+            <div id="box5">
+                <div class="floater">
+                    <img src="https://via.placeholder.com/50x50" />
+                </div>
+                <div class="floater"></div>
+                <h5>Innovative Structure</h5>
+                <p>
+                    Consectetur adipiscing elit. Nam dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+            <div id="box6">
+                <div class="floater">
+                    <img src="https://via.placeholder.com/50x50" />
+                </div>
+                <div class="floater"></div>
+                <h5>Innovative Structure</h5>
+                <p>
+                    Consectetur adipiscing elit. Nam dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
